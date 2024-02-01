@@ -7,9 +7,13 @@ import img4 from "../src/assets/nawaz.jpg";
 
 function App() {
   let [isdisable, setisdisable] = useState(false);
-  function handledisable() {
+  // let [voted,setvoted] = useState("");
+  function handledisable(event) {
+    let element = event.target
+    console.log(element)
     setisdisable(true);
     console.log("click");
+    // setvoted("voted")
   }
   return (
     <div className="App">
@@ -52,7 +56,7 @@ function App() {
               </li>
             </ul>
             <form className="d-flex justify-content-center align-items-center">
-            <i className="fa-regular fa-user"></i>
+            <i style={{color:"white"}} className="fa-regular fa-user me-2 mb-1"></i>
               <h5 className="text-white me-3">Hassan Gazder</h5>
               <button className="btn btn-outline-success" type="submit">Log Out</button>
             </form>
@@ -86,7 +90,8 @@ function App() {
                   href="vote"
                   class="btn btn-success"
                 >
-                  Vote
+                  {/* {isdisable ? voted : "vote"} */}
+                  <p>vote1</p>
                 </button>
                 <p className="note">
                   Be Careful Vote Would Be Submitted Only Once
@@ -98,10 +103,9 @@ function App() {
             <div class="card">
               <img src={img4} className="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">PPP</h5>
+                <h5 class="card-title">PML-N</h5>
                 <p class="card-text">
-                  "I can't let my mother's death have been in vain. Democracy is
-                  the best revenge, and we will have it"
+                  "It is not justice when you beat someone after tying their hands, but award a clean chit to another who openly confesses his crimes"
                 </p>
                 <button
                   disabled={isdisable ? true : false}
@@ -110,7 +114,8 @@ function App() {
                   href="vote"
                   class="btn btn-success"
                 >
-                  Vote
+                  {/* {isdisable ? voted : "vote"} */}
+                  <p>vote2</p>
                 </button>
                 <p className="note">
                   Be Careful Vote Would Be Submitted Only Once
@@ -134,7 +139,8 @@ function App() {
                   href="vote"
                   class="btn btn-success"
                 >
-                  Vote
+                  {/* {isdisable ? voted : "vote"} */}
+                  <p>vote3</p>
                 </button>
                 <p className="note">
                   Be Careful Vote Would Be Submitted Only Once
@@ -158,7 +164,8 @@ function App() {
                   href="vote"
                   className="btn btn-success"
                 >
-                  Vote
+                  {/* {isdisable ? voted : "vote"} */}
+                  <p>vote3</p>
                 </button>
                 <p className="note">
                   Be Careful Vote Would Be Submitted Only Once
